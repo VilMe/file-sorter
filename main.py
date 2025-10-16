@@ -45,4 +45,7 @@ def main():
         sort_files(user_input)
         remove_empty_folders(user_input)
         print('Files sorted successfully')
+    else: 
+        print('Invalid path, please provide a valid file path.')
+
         
