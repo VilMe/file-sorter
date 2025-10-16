@@ -48,4 +48,5 @@ def main():
     else: 
         print('Invalid path, please provide a valid file path.')
 
-        
+if __name__ == '__main__':
+    main()
