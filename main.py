@@ -28,7 +28,7 @@ def sort_files(source_path: str):
 
                 shutil.move(file_path, target_path)
 
-def remove_empty_folderss(source_path: str):
+def remove_empty_folders(source_path: str):
     """Removes all empty folders"""
 
     for root_dir, sub_dir, filenames in os.walk(source_path, topdown=False):
@@ -37,3 +37,12 @@ def remove_empty_folderss(source_path: str):
 
             if not os.listdir(folder_path):
                 os.rmdir(folder_path)
+
+def main():
+    user_input: str = input('Please provide a file path to sort: ')
+
+    if os.path.existss(path=user_input):
+        sort_files(user_input)
+        remove_empty_folders(user_input)
+        print('Files sorted successfully')
+        
