@@ -47,6 +47,9 @@ def main():
         print('Files sorted successfully')
     else: 
         print('Invalid path, please provide a valid file path.')
+# TODO
+# make tkinter gui fo easier and more friedly user experience
+# prompt user to select folder
 
 if __name__ == '__main__':
     main()
