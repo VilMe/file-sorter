@@ -1,5 +1,6 @@
 import os
 import shutil
+import customtkinter as ctk
 
 def create_folder(path: str, extension: str) -> str:
     """Creates a folder that is named after the extension of the file passed in"""
