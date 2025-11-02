@@ -41,9 +41,10 @@ def remove_empty_folders(source_path: str):
                 os.rmdir(folder_path)
 
 def file_dialogbox():
-    tkinter.filedialog.askdirectory(
+    get_filepath = tkinter.filedialog.askdirectory(
         initialdir="/",
         title="Select a Folder")
+    return get_filepath
 
 def main():
     # user_input: str = input('Please provide a file path to sort: ')
