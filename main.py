@@ -43,22 +43,22 @@ def remove_empty_folders(source_path: str):
 def file_dialogbox():
     get_filepath = tkinter.filedialog.askdirectory(
         initialdir="/",
-        title="Select a Folder")
+        title="Please provide a folder path to sort")
     return get_filepath
 
 def main():
     # user_input: str = input('Please provide a file path to sort: ')
-    test_filepath: str = file_dialogbox()
+    chosen_filepath: str = file_dialogbox()
     print('='*15)
-    print(test_filepath)
+    print(chosen_filepath)
     print('='*15)
 
-    # if os.path.existss(path=user_input):
-    #     sort_files(user_input)
-    #     remove_empty_folders(user_input)
-    #     print('Files sorted successfully')
-    # else: 
-    #     print('Invalid path, please provide a valid file path.')
+    if os.path.exists(path=chosen_filepath):
+        sort_files(chosen_filepath)
+        remove_empty_folders(chosen_filepath)
+        print('Files sorted successfully')
+    else: 
+        print('Invalid path, please provide a valid file path.')
 # TODO
 # make tkinter gui fo easier and more friedly user experience
 # prompt user to select folder
