@@ -19,7 +19,7 @@ def create_folder(path: str, extension: str) -> str:
 def sort_files(source_path: str):
     """Sorts files based on a given path"""
     print('x'*15)
-    print(source_path)
+    print(f'this is source_path {source_path}')
     print('x'*15)
     for root_dir, sub_dir, filenames in os.walk(source_path):
         for filename in filenames:
@@ -55,9 +55,6 @@ def file_dialogbox():
 def main():
     # user_input: str = input('Please provide a file path to sort: ')
     chosen_filepath: str = file_dialogbox()
-    print('='*15)
-    print(chosen_filepath)
-    print('='*15)
 
     if os.path.exists(path=chosen_filepath):
         sort_files(chosen_filepath)
